@@ -11,6 +11,13 @@ body{
 	text-align: center;
 }
 
+#story{
+	background:url(../img/histoire.jpg) no-repeat;
+	background-size: cover;
+	margin:auto;
+	text-align: center;
+}
+
 #button_play{
 	vertical-align: middle;
 }
