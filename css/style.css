@@ -4,20 +4,33 @@ body{
 	margin: 0;
 }
 
-#home{
-	background:url(../img/accueil.png) no-repeat;
+.backgroundImage {
 	background-size: cover;
 	margin:auto;
+}
+
+#home{
+	background:url(../img/accueil.png) no-repeat;
 	text-align: center;
 }
 
 #story{
 	background:url(../img/histoire.jpg) no-repeat;
-	background-size: cover;
-	margin:auto;
 	text-align: center;
 }
 
+#menu{
+    background:url(../img/menu.png) no-repeat;
+   
+}
+
+#bouton_niveau2 {
+	margin: 0px 30px;
+}
+
+#bouton_aide {
+	margin-top: 300px;
+}
 #button_play{
 	vertical-align: middle;
 }
