@@ -13,14 +13,10 @@ body{
 		width:99%;
 		height: 99%;
 	}	
-	.menu_buttons{
-		width:99%;
-		height: 99%;
-	}
 }
 
 .backgroundBlock {
-	background-size: cover;
+	background-size: contain;
 	margin:auto;
 	position: relative;
 	text-align: center;
@@ -44,12 +40,17 @@ body{
 	position: absolute;
 }
 
-#bouton_niveau2 {
-	margin: 0px 40px;
+.bouton_niveau{
+	cursor:pointer;
+	padding: 0 5%;
 }
 
 .aide {
     position: absolute;
+}
+
+#bouton_aide{
+	cursor:pointer;
 }
 
 
