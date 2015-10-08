@@ -6,13 +6,18 @@
   </head>
      
   <body>
-      <div id="menu" class="backgroundImage">
-          <input type="image" id="bouton_niveau1" src = "./img/bouton_niveau1.png" onclick="location.href='histoire.html'"/>
-          <input type="image" id="bouton_niveau2" src = "./img/bouton_niveau2.png" onclick="location.href='histoire.html'" value="jouer"/>
-          <input type="image" id="bouton_niveau3" src = "./img/bouton_niveau3.png" onclick="location.href='histoire.html'" value="jouer"/>
-          <input type="image" id="bouton_aide" src = "./img/bouton_aide.png" onclick="location.href='histoire.html'" value="jouer"/>
+      <div id="menu" class="backgroundBlock">
+          <div class="menu_buttons">     
+                  <img id="bouton_niveau1" class="bouton_niveau" src = "./img/bouton_niveau1.png" onclick="location.href='histoire.html'"/>
+                  <img id="bouton_niveau2" class="bouton_niveau" src = "./img/bouton_niveau2.png" onclick="location.href='histoire.html'"/>
+                  <img id="bouton_niveau3" class="bouton_niveau" src = "./img/bouton_niveau3.png" onclick="location.href='histoire.html'"/>
+          </div>      
+          <div class="aide">
+                  <img id="bouton_aide" src = "./img/bouton_aide.png" onclick="location.href='histoire.html'"/>         
+          </div>
+          <img class="backgroundImage" src= "./img/accueil.jpg"></img>
       </div>
-
+     
       <audio src="audio/jinglebells.mp3" type="audio/mp3" autoplay="true"></audio>
 
       <script type="text/javascript" src="js/jquery.js"></script>

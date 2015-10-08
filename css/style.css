@@ -4,34 +4,52 @@ body{
 	margin: 0;
 }
 
-.backgroundImage {
+/*responsive*/
+@media screen and  (max-width : 1020px) {
+	body{
+		padding: 0;
+	}
+	.backgroundImage{
+		width:99%;
+		height: 99%;
+	}	
+	.menu_buttons{
+		width:99%;
+		height: 99%;
+	}
+}
+
+.backgroundBlock {
 	background-size: cover;
 	margin:auto;
-}
-
-#home{
-	background:url(../img/accueil.png) no-repeat;
+	position: relative;
 	text-align: center;
 }
-
-#story{
-	background:url(../img/histoire.jpg) no-repeat;
-	text-align: center;
+/*home page*/
+.divlink{
+	position: absolute;
+}
+#title{
+	cursor: pointer;
+}
+#bouton_jouer{
+	cursor: pointer;
+	margin-top: 10%;
 }
 
-#menu{
-    background:url(../img/menu.png) no-repeat;
-   
+/*story page*/
+
+/*menu page*/
+.menu_buttons{
+	position: absolute;
 }
 
 #bouton_niveau2 {
-	margin: 0px 30px;
+	margin: 0px 40px;
 }
 
-#bouton_aide {
-	margin-top: 300px;
+.aide {
+    position: absolute;
 }
-#button_play{
-	vertical-align: middle;
-}
+
 
