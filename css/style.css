@@ -35,6 +35,11 @@ body{
 
 /*story page*/
 
+/*intro page*/
+#bambi{
+position: absolute;;
+}
+
 /*menu page*/
 .menu_buttons{
 	position: absolute;

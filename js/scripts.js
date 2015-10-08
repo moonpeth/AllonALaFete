@@ -22,7 +22,9 @@ function resize(){
     $('.bouton_niveau').css({'width':width*0.15});
 	$('.aide').css({'top':X,'left':Y,'width':width, 'margin-top': height/2+"px"});
 	$('#bouton_aide').css({'width':width*0.15});
-   
+    //intro page
+    $('#bambi').css({'top':X+height/3,'left':Y+width/3,'width':width*0.4,"height":height*0.5});
+
 }
 
 resize();
