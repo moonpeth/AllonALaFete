@@ -40,7 +40,7 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 
 /*intro page*/
 #bambi{
-position: absolute;;
+position: absolute;
 }
 
 /*menu page*/
@@ -61,4 +61,8 @@ position: absolute;;
 	cursor:pointer;
 }
 
+/*niveau1 page*/
 
+#princess {
+position: absolute;
+}

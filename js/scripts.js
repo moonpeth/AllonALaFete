@@ -24,6 +24,8 @@ function resize(){
 	$('#bouton_aide').css({'width':width*0.15});
     //intro page
     $('#bambi').css({'top':X+height/3,'left':Y+width/3,'width':width*0.4,"height":height*0.5});
+    //niveau page
+    $('#princess').css({'top':X+height/10,'left':Y+width/2,'width':width*0.4,"height":height*0.8});
 
 }
 
