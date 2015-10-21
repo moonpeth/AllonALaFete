@@ -7,34 +7,6 @@ function resize(){
 	// $(".backgroundImage").css("width", $(window).height()*1.35+"px");
 	// $("#button_play").css("margin-top", ($(window).height()-124)/2-170+"px");
 	// $("#bouton_niveau2").css("margin-top", $(window).height()/2-90+"px");
-
-	
-
-
-	// //get the position of backgrand image whose size change with the size of window of each page
-	// var X = $('.backgroundImage').position().top; 
-	// var Y = $('.backgroundImage').position().left;
-	// var width = $('.backgroundImage').width();
-	// var height = $('.backgroundImage').height();
- //    //home page
-	// $('.divlink').css({'top':X,'left':Y,'width':width});
-	// $('#title').css({'width':width});
-	// $('#bouton_jouer').css({'width':width*0.22});
-	// //menu page
-	// $('.menu_buttons').css({'top':X,'left':Y,'width':width, 'margin-top': height/2-100+"px"});
- //    $('.bouton_niveau').css({'width':width*0.15});
-	// $('.aide').css({'top':X,'left':Y,'width':width, 'margin-top': height/2+"px"});
-	// $('#bouton_aide').css({'width':width*0.15});
- //    //intro page
- //    $('#bambi').css({'top':X+height/3,'left':Y+width/3,'width':width*0.4,"height":height*0.5});
-    
-
-
-
-    //niveau page
-    // $('#princess').css({'top':X+height/10,'left':Y+width/2,'width':width*0.4,"height":height*0.8});
-    // $('#robe1').css({'top':X+height/10,'left':Y+width/4,'width':width*0.25,"height":height*0.7});
-   
 }
 
 resize();
@@ -47,6 +19,24 @@ $("#storyAudio").bind('ended', function(){
 $("#paroleAudio").bind('ended', function(){
     window.location.replace("menu.html");
 }); 
+
+var item = {};
+
+/*niveau1*/
+$(".objet").bind('click',function(event){
+	if($(".objet").parent().is(".robeOne")){
+		item.oldParent = $(event.currentTarget).parent();
+		item.oldId = $(event.currentTarget).attr("id");
+		$("#pr").html(event.currentTarget);
+		$(event.currentTarget).attr("id", "robePlaced");
+		console.log("put on");
+	}
+	else{//take off the robe
+		item.oldParent.html(event.currentTarget);
+		$(event.currentTarget).attr("id", item.oldId);
+		console.log("take off");
+	}
+});
 
 /*pour les drag et drop des vetements*/
 function allowDrop(ev)
