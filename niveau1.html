@@ -7,8 +7,13 @@
      
 	<body>
     	 <div id="niveau1" class="backgroundBlock">
-            <img class="backgroundImage" src= "./img/fond.png"/>
-            <img id="princess"src="./img/princess.png"/>
+          <div id="content">
+            <div id="robeOne" ondrop="drop(event);" ondragover="allowDrop(event);">
+            <img class="objet" id="robe1" src="./img/robe7.png" draggable="true" ondragstart="drag(event);"/>
+            </div> 
+            <div id="princesse" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+          </div>
+
       </div>
 
       <audio src="audio/jinglebells.mp3" type="audio/mp3" autoplay="true"></audio>

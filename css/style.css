@@ -2,30 +2,9 @@
 body{
 	padding: 0;
 	margin: 0;
-	    cursor: url(../img/cursor_hand.png) 18 10, default;
+	cursor: url(../img/cursor_hand.png) 18 10, default;
 }
 
-/*responsive*/
-@media screen and  (max-width : 1020px) {
-	body{
-		padding: 0;
-	}
-	.backgroundImage{
-		width:99%;
-		height: 99%;
-	}	
-}
-
-.backgroundBlock {
-	background-size: contain;
-	margin:auto;
-	position: relative;
-	text-align: center;
-}
-/*home page*/
-.divlink{
-	position: absolute;
-}
 /*#title{
 	cursor: pointer;
 }*/
@@ -33,7 +12,7 @@ body{
 /*general clickable object */
 #bouton_jouer{
 cursor: url(../img/cursor_hand.png) 18 10, default;
-	margin-top: 10%;
+	margin-top: 12%;
 }
 
 /*story page*/
@@ -63,6 +42,47 @@ position: absolute;
 
 /*niveau1 page*/
 
-#princess {
+/*.objet {
 position: absolute;
+}
+*/
+
+#princesse{
+	background: url("../img/princesse_nue.png");
+	background-size: contain;
+	width: 368px;
+	height: 582px;
+	float: right;
+	margin-top: 10%;
+	margin-right: 12%;
+}
+
+#content, #contentAccueil{
+	background: url("../img/fond.png");
+	width: 1024px;
+	height: 768px;
+	margin: 0 auto;
+}
+
+#contentAccueil{
+	background: url("../img/accueil.jpg") no-repeat !important;
+	text-align: center;
+}
+
+#robe1 {
+	width: 368px;
+	height: 582px;
+	margin-top: 10%;
+	margin-left: 10%;
+}
+
+#robePlaced {
+	width: 368px;
+	height: 582px;
+}
+
+#robeOne {
+	width: 400px;
+	height: 600px;
+	float: left;
 }
