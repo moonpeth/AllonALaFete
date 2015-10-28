@@ -6,9 +6,33 @@
 	</head>
      
 	<body>
-		<h1>this is niveau3</h1>
-		<script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/velocity.js"></script>
-        <script type="text/javascript" src="js/scripts.js"></script>
+    	 <div id="niveau1" class="backgroundBlock">
+          <div id="content3">
+            <div class="robeOne" ondrop="drop(event);" ondragover="allowDrop(event);">
+            <img class="objet" id="robe1" src="./img/robe1.png" draggable="true" ondragstart="drag(event);"/>
+            </div> 
+            <div class="robeTwo" ondrop="drop(event);" ondragover="allowDrop(event);">
+            <img class="objet" id="robe2" src="./img/robe2.png" draggable="true" ondragstart="drag(event);"/>
+            </div> 
+            <div class="robeThree" ondrop="drop(event);" ondragover="allowDrop(event);">
+            <img class="objet" id="robe3" src="./img/robe3.png" draggable="true" ondragstart="drag(event);"/>
+            </div> 
+            <div class="robeFour" ondrop="drop(event);" ondragover="allowDrop(event);">
+            <img class="objet" id="robe4" src="./img/robe4.png" draggable="true" ondragstart="drag(event);"/>
+            </div> 
+
+            <div class="princesse" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+            <div id="soleil">
+            	
+            </div>
+          </div>
+
+      </div>
+
+      <audio src="audio/jinglebells.mp3" type="audio/mp3" autoplay="true"></audio>
+
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script type="text/javascript" src="js/velocity.js"></script>
+      <script type="text/javascript" src="js/scripts.js"></script>
 	</body>
 </html>

@@ -21,19 +21,41 @@ $("#paroleAudio").bind('ended', function(){
 }); 
 
 var item = {};
-
 /*niveau1*/
-$(".objet").bind('click',function(event){
-	if($(".objet").parent().is(".robeOne")){
+$("#content1 .objet").bind('click',function(event){
+	console.log($(".objet").parents());
+	//click on the robes when princess hasn't yet have a robe, put on a robe
+	if($(".objet").parents("#pr").length == 0){
 		item.oldParent = $(event.currentTarget).parent();
 		item.oldId = $(event.currentTarget).attr("id");
+		item.oldRobe = $(event.currentTarget);
 		$("#pr").html(event.currentTarget);
 		$(event.currentTarget).attr("id", "robePlaced");
 		console.log("put on");
+		console.log(item);
 	}
-	else{//take off the robe
+	//click on the robes when princess has already have a robe, change robe 
+	else if($(event.currentTarget).parents("#pr").length==0){
+		console.log("change a robe");
+	 $("#pr").html(event.currentTarget);
+	 $(event.currentTarget).attr("id", "robePlaced");
+	 $(item.oldParent).html(item.oldRobe);
+	 $(item.oldRobe).attr("id", item.oldId);
+
+	 item.oldParent = $(event.currentTarget).parent();
+	 item.oldId = $(event.currentTarget).attr("id");
+	 item.oldRobe = $(event.currentTarget);
+
+	  console.log("hahhahhahhhahahaha");
+	  console.log(item);
+      console.log($(event.currentTarget));
+	}
+	//click on the princess to take off the robe 
+	else{	
+		console.log("lollllllllllllllllllllll");
 		item.oldParent.html(event.currentTarget);
 		$(event.currentTarget).attr("id", item.oldId);
+		item = {};
 		console.log("take off");
 	}
 });
