@@ -35,7 +35,9 @@ $(".objet").bind('click',function(event){
 		item.oldParent.html(event.currentTarget);
 		$(event.currentTarget).attr("id", item.oldId);
 		console.log("take off");
+		
 	}
+	
 });
 
 /*pour les drag et drop des vetements*/
