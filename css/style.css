@@ -50,7 +50,7 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	height: 582px;
 	float: right;
 	margin-top: 10%;
-	margin-right: 12%;
+	margin-right: 5%;
 }
 
 #content1,#content2,#content3,#contentAccueil,#contentHistoire,#contentIntro,#contentMenu{
@@ -81,37 +81,75 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 
 #robe1 {
 	position:absolute;
-	width: 368px;
-	height: 582px;
+	width: 294.4px;
+	height: 465.6px;
+	margin-top: 0%;
+	margin-left: 0%;
+	border: solid green 1px;
+}
+
+ .robe1 {
+	position:absolute;
+    width: 294.4px;
+	height: 465.6px;
 	margin-top: -5%;
 	margin-left: 0%;
+	border: solid green 1px;
 }
 
-#robe2 {
+#robe2{
 	position: absolute;
-	width: 368px;
-	height: 582px;
-	margin-top: 1%;
-	margin-left: 10%;
-	z-index: ;
+	width: 294.4px;
+	height: 465.6px;
+	margin-top: 0%;
+	margin-left: 0%;
+	border: solid red 1px;
 }
 
-#robe3 {
+.robe2 {
 	position: absolute;
-	width: 368px;
-	height: 582px;
+	width: 294.4px;
+	height: 465.6px;
+	margin-top: 2%;
+	margin-left: 15%;
+	border: solid red 1px;
+}
+
+#robe3{
+	position: absolute;
+	width: 294.4px;
+	height: 465.6px;
+	margin-top: 0%;
+	margin-left: 0%;
+	border: solid yellow 1px;
+}
+.robe3 {
+	position: absolute;
+	width: 294.4px;
+	height: 465.6px;
 	margin-top: 7%;
-	margin-left: 20%;
+	margin-left: 30%;
+	border: solid yellow 1px;
 }
-
 #robe4 {
 	position: absolute;
-	width: 368px;
-	height: 582px;
-	margin-top: 12%;
-	margin-left: 28%;
+	width: 294.4px;
+	height: 465.6px;
+	margin-top: 0%;
+	margin-left: 0%;
+	border: solid black 1px;
+
 }
 
+.robe4{
+	position: absolute;
+	width: 294.4px;
+	height: 465.6px;
+	margin-top: 25%;
+	margin-left: 4%;
+	border: solid black 1px;
+
+}
 .robePlaced {
 	margin-top: 0% !important;
 	margin-left: 0% !important;	
@@ -119,8 +157,6 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	height: 582px !important;
 }
 
-.robe1 .robe2 .robe3 .robe4 {
-	width: 400px;
-	height: 600px;
-	float: left;
-}
+/*.robe1, .robe2, .robe3, .robe4 {
+
+}*/
