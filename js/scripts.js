@@ -20,47 +20,31 @@ $("#paroleAudio").bind('ended', function(){
     window.location.replace("menu.html");
 }); 
 
-var item = {};
-/*niveau1*/
+
+/*niveau1   click*/
+function switchRobe(){ //take the robe dressed on the princess to armoire
+	var idChildren = $("#pr").children().attr('id');
+	$("."+idChildren).html($("#"+idChildren));
+	$("#"+idChildren).attr('class', 'objet');
+}
+
 $("#content1 .objet").bind('click',function(event){
-	console.log($(".objet").parents());
-	//click on the robes when princess hasn't yet have a robe, put on a robe
-	if($(".objet").parents("#pr").length == 0){
-		item.oldParent = $(event.currentTarget).parent();
-		item.oldId = $(event.currentTarget).attr("id");
-		item.oldRobe = $(event.currentTarget);
-		$("#pr").html(event.currentTarget);
-		$(event.currentTarget).attr("id", "robePlaced");
-		console.log("put on");
-		console.log(item);
+    // if this robe is not yet dressed on the princess
+	if($(this).parents("#pr").length == 0){
+		//if the princess has alreay another robe, then change it
+		if($("#pr").children().length > 0){
+			switchRobe();
+		}
+		$("#pr").html(this);
+		$(this).attr("class", "robePlaced");
+	}else{  //if this robe is alreay dressed on the princess, take it off
+		switchRobe();
 	}
-	//click on the robes when princess has already have a robe, change robe 
-	else if($(event.currentTarget).parents("#pr").length==0){
-		console.log("change a robe");
-	 $("#pr").html(event.currentTarget);
-	 $(event.currentTarget).attr("id", "robePlaced");
-	 $(item.oldParent).html(item.oldRobe);
-	 $(item.oldRobe).attr("id", item.oldId);
 
-	 item.oldParent = $(event.currentTarget).parent();
-	 item.oldId = $(event.currentTarget).attr("id");
-	 item.oldRobe = $(event.currentTarget);
-
-	  console.log("hahhahhahhhahahaha");
-	  console.log(item);
-      console.log($(event.currentTarget));
-	}
-	//click on the princess to take off the robe 
-	else{	
-		console.log("lollllllllllllllllllllll");
-		item.oldParent.html(event.currentTarget);
-		$(event.currentTarget).attr("id", item.oldId);
-		item = {};
-		console.log("take off");
-	}
 });
 
-/*pour les drag et drop des vetements*/
+
+/*niveau2 & 3,  drag&drop*/
 function allowDrop(ev)
 {
 	ev.preventDefault();
@@ -69,12 +53,56 @@ function allowDrop(ev)
 var robe = null;
 
 function drag(ev)
-{
-	robe = ev.srcElement;
+{  //if the robe is not yet dressed on the princess
+   if($(ev.srcElement).parents("#pr").length == 0){
+        robe = ev.srcElement;
+   }else{ //if the robe is already on the princess, then take it off
+	   	robe = ev.srcElement;
+	   	//switchRobe();
+   }
 }
 
 function drop(ev)
-{
-	$(ev.srcElement).html(robe);
-	$(robe).attr("id", "robePlaced");
+{   
+	console.log(ev);
+	if($(robe).parents().attr('id') != "pr" &&
+		($(ev.srcElement).attr('id') == "pr" || 
+			$(ev.srcElement).parents().attr('id') == "pr")){
+		//si la princesse a deja une robe
+		if($("#pr").children() != 0){
+			switchRobe();
+		}
+		$("#pr").html(robe);
+		$(robe).attr("class", "robePlaced");
+	} else if ($(robe).parents().attr('id') == "pr" &&
+		$(ev.srcElement).attr('class') == $(robe).attr('id')) {
+		switchRobe();
+	}
+
+
+		
+
+
+ //  	console.log("drop!!!!!!");
+	// if($(ev.toElement).attr('id') == "pr"){
+ //        console.log("princess!!!!!!");
+	// 	if($(this).parents("#pr").length == 0){
+	// 		if($("#pr").children().length > 0){
+	// 			console.log("deja habillé");
+	// 		// switchRobe();	
+	// 		var idChildren = $("#pr").children().attr('id');
+	// 	    $("."+idChildren).html($("#"+idChildren));
+	// 	    $("#"+idChildren).attr('class', 'objet');
+	// 	    }	
+	// 		$(ev.srcElement).html(robe);
+	// 		$(robe).attr("class", "robePlaced");
+	      
+ //       }else{
+	// 	// switchRobe();
+	// 	 console.log("qdfqfqdf!!!!!!");
+	//     var idChildren = $("#pr").children().attr('id');
+	//     $("."+idChildren).html($("#"+idChildren));
+	//     $("#"+idChildren).attr('class', 'objet');	
+	//     }	
+ //  	}	
 }
