@@ -112,12 +112,14 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	margin-left: 28%;
 }
 
-#robePlaced {
-	width: 368px;
-	height: 582px;
+.robePlaced {
+	margin-top: 0% !important;
+	margin-left: 0% !important;	
+	width: 368px !important;
+	height: 582px !important;
 }
 
-.robeOne .robeTwo .robeThree .robeFour {
+.robe1 .robe2 .robe3 .robe4 {
 	width: 400px;
 	height: 600px;
 	float: left;
