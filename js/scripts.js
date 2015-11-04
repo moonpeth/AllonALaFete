@@ -23,50 +23,26 @@ $("#paroleAudio").bind('ended', function(){
 var item = {};
 var positionOrigine = {};
 /*niveau1*/
+
+function switchRobe(){
+	var idChildren = $("#pr").children().attr('id');
+	$("."+idChildren).html($("#"+idChildren));
+	$("#"+idChildren).attr('class', 'objet');
+}
 $("#content1 .objet").bind('click',function(event){
-	//click on the robes when princess hasn't yet have a robe, put on a robe
-	if($(".objet").parents("#pr").length == 0){
-		item.oldParent = $(event.currentTarget).parent();
-		item.oldId = $(event.currentTarget).attr("id");
-		item.oldRobe = $(event.currentTarget);
-		$("#pr").html(event.currentTarget);
-		$(event.currentTarget).attr("id", "robePlaced");
-		console.log("put on");
+
+	if($(this).parents("#pr").length == 0){
+		if($("#pr").children().length > 0){
+			switchRobe();
+		}
+		$("#pr").html(this);
+		$(this).attr("class", "robePlaced");
+	}else{
+		switchRobe();
 	}
-	//click on the robes when princess has already have a robe, change robe 
-	else if($(event.currentTarget).parents("#pr").length==0){
-	 console.log("change a robe");
-     console.log($(event.currentTarget));
-     $("#pr").empty();
-	 $("#pr").html(event.currentTarget);
-	        //if oldParent est princess
-			 if($(item.oldParent).attr("id")=="pr"){
-			 	   console.log("333333333");
-			 	   $(positionOrigine.oldParent).html(item.oldRobe);
-		           $(positionOrigine.oldRobe).attr("id", item.oldId);
-			 	   positionOrigine.oldParent =  $(item.oldParent);
-		           positionOrigine.oldId = $(item.oldId);
-		           // positionOrigine.oldRobe = $(event.currentTarget);		        
-			 }else{
-		         console.log("2222222222");
-		         $(item.oldParent).html(item.oldRobe);
-			     $(item.oldRobe).attr("id", item.oldId);
-			 	 item.oldId = $(event.currentTarget).attr("id");
-			 	 item.oldParent = $(event.currentTarget).parent();
-			     item.oldRobe = $(event.currentTarget);
-			 }	
-	 $(event.currentTarget).attr("id", "robePlaced");
-	  console.log("hahhahhahhhahahaha");
-	}
-	//click on the princess to take off the robe 
-	else{	
-		console.log("lollllllllllllllllllllll");
-		item.oldParent.html(event.currentTarget);
-		$(event.currentTarget).attr("id", item.oldId);
-		item = {};
-		console.log("take off");
-	}
+
 });
+
 
 /*pour les drag et drop des vetements*/
 function allowDrop(ev)
@@ -83,6 +59,9 @@ function drag(ev)
 
 function drop(ev)
 {
-	$(ev.srcElement).html(robe);
-	$(robe).attr("id", "robePlaced");
+	if($(ev.toElement).attr('id') == "pr"){
+		$(ev.srcElement).html(robe);
+		$(robe).attr("class", "robePlaced");
+	}
+	
 }
