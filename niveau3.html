@@ -8,23 +8,32 @@
 	<body>
     	 <div id="niveau3" class="backgroundBlock">
           <div id="content3">
-            <div class="robe1" ondrop="drop(event);" ondragover="allowDrop(event);">
-            <img class="objet" id="robe1" src="./img/robe1.png" draggable="true" ondragstart="drag(event);"/>
-            </div> 
-            <div class="robe2" ondrop="drop(event);" ondragover="allowDrop(event);">
-            <img class="objet" id="robe2" src="./img/robe2.png" draggable="true" ondragstart="drag(event);"/>
-            </div> 
-            <div class="robe3" ondrop="drop(event);" ondragover="allowDrop(event);">
-            <img class="objet" id="robe3" src="./img/robe3.png" draggable="true" ondragstart="drag(event);"/>
-            </div> 
+              <div class="up_robe1" ondrop="dropUp(event);" ondragover="allowDrop(event);">
+              <img class="objet" id="up_robe1" src="./img/up_robe1.png" draggable="true" ondragstart="drag(event);"/>
+              </div> 
+              <div class="up_robe2" ondrop="dropUp(event);" ondragover="allowDrop(event);">
+              <img class="objet" id="up_robe2" src="./img/up_robe2.png" draggable="true" ondragstart="drag(event);"/>
+              </div> 
+              <div class="up_robe3" ondrop="dropUp(event);" ondragover="allowDrop(event);">
+              <img class="objet" id="up_robe3" src="./img/up_robe3.png" draggable="true" ondragstart="drag(event);"/>
+              </div> 
+              <div class="down_robe1" ondrop="dropDown(event);" ondragover="allowDrop(event);">
+              <img class="objet" id="down_robe1" src="./img/down_robe1.png" draggable="true" ondragstart="drag(event);"/>
+              </div> 
+              <div class="down_robe2" ondrop="dropDown(event);" ondragover="allowDrop(event);">
+              <img class="objet" id="down_robe2" src="./img/down_robe2.png" draggable="true" ondragstart="drag(event);"/>
+              </div> 
+              <div class="down_robe3" ondrop="dropDown(event);" ondragover="allowDrop(event);">
+              <img class="objet" id="down_robe3" src="./img/down_robe3.png" draggable="true" ondragstart="drag(event);"/>
+              </div> 
 
-            <div class="robe4" ondrop="drop(event);" ondragover="allowDrop(event);">
-            <img class="objet" id="robe4" src="./img/robe4.png" draggable="true" ondragstart="drag(event);"/>
-            </div> 
-           <div class="princesse" id="pr" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+              <div class="princesse" id="pr">
+                <div id="up_pr" ondrop="dropUp(event);" ondragover="allowDrop(event);"> </div>
+                <div id="down_pr" ondrop="dropDown(event);" ondragover="allowDrop(event);"> </div>
+              </div>
 
-            <div id="soleil">            	
-            </div>
+              <div id="soleil">            	
+              </div>
           </div>
 
       </div>

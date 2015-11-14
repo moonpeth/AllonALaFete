@@ -51,6 +51,22 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	float: right;
 	margin-top: 10%;
 	margin-right: 5%;
+	border: solid red 1px;
+	position: relative;
+}
+#up_pr {
+	position: absolute;
+    width: 368px;
+	height: 231px;
+	border:solid blue 2px;
+}
+
+#down_pr{
+	position: absolute;
+    width: 368px;
+	height: 384px;
+	border:solid green 2px;
+	bottom: 0;
 }
 
 #content1,#content2,#content3,#contentAccueil,#contentHistoire,#contentIntro,#contentMenu{
@@ -79,7 +95,7 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	text-align: center;
 }
 
-#robe1 {
+#robe1, .robe1,#robe2, .robe2,#robe3, .robe3,#robe4, .robe4 {
 	position:absolute;
 	width: 257.6px;
 	height: 407.4px;
@@ -89,70 +105,67 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 }
 
  .robe1 {
-	position:absolute;
-  	width: 257.6px;
-	height: 407.4px;
 	margin-top: 20%;
-	margin-left: 0%;
 	z-index: 2;
 	/*border: solid green 1px;*/
 }
 
-#robe2{
-	position: absolute;
-    width: 257.6px;
-	height: 407.4px;
-	margin-top: 0%;
-	margin-left: 0%;
-	/*border: solid red 1px;*/
-}
-
 .robe2 {
-	position: absolute;
-	width: 257.6px;
-	height: 407.4px;
-	margin-top: 0%;
-	margin-left: 0%;
 	z-index: 1;
 	/*border: solid red 1px;*/
 }
 
-#robe3{
-	position: absolute;
-	width: 257.6px;
-	height: 407.4px;
-	margin-top: 0%;
-	margin-left: 0%;
-	/*border: solid yellow 1px;*/
-}
 .robe3 {
-	position: absolute;
-	width: 257.6px;
-	height: 407.4px;
-	margin-top: 0%;
 	margin-left: 18%;
 /*	border: solid yellow 1px;*/
 }
-#robe4 {
-	position: absolute;
-	width: 257.6px;
-	height: 407.4px;
-	margin-top: 0%;
-	margin-left: 0%;
-/*	border: solid black 1px;*/
-
-}
 
 .robe4{
-	position: absolute;
-	width: 257.6px;
-	height: 407.4px;
     margin-top: 20%;
 	margin-left: 18%;
 	/*border: solid black 1px;
 */
 }
 
+
+#up_robe1, .up_robe1,#up_robe2, .up_robe2,#up_robe3, .up_robe3{
+	position:absolute;
+	width: 257.6px;
+	height: 161.7px;
+	margin-top: 0%;
+	margin-left: 0%;
+		border: solid black 1px;
+}
+
+ #down_robe1,.down_robe1,#down_robe2, .down_robe2,#down_robe3, .down_robe3 {
+ 	position:absolute;
+	width: 257.6px;
+	height: 268.8px;
+	margin-top: 0%;
+	margin-left: 0%;
+		border: solid yellow 1px;
+ }
+.up_robe2{
+	margin-top: 0%;
+	margin-left: 12%;
+}
+
+.up_robe3{
+	margin-top: 0%;
+	margin-left: 21%;
+}
+.down_robe1 {
+margin-top: 20%;
+margin-left: 0%;
+}
+.down_robe2 {
+margin-top: 20%;
+margin-left: 12%;
+}
+.down_robe3 {
+margin-top: 20%;
+margin-left: 21%;
+}
 .robePlaced {
 	margin-top: 0% !important;
 	margin-left: 0% !important;	
@@ -160,10 +173,19 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	height: 582px !important;
 }
 
-/*.robe1, .robe2, .robe3, .robe4 {
+.upItemPlaced {
+    margin-top: 0% !important;
+	margin-left: 0% !important;	
+	width: 368px !important;
+	height: 231px !important;
+}
 
-}*/
-
+.downItemPlaced {
+    margin-top: 0% !important;
+	margin-left: 0% !important;	
+	width: 368px !important;
+	height: 384px !important;
+}
 #soleil{
     background: url("../img/pluie.gif") no-repeat !important;
 	text-align: center;
