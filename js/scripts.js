@@ -33,11 +33,12 @@ function switchRobeDown(){ //take the item dressed on the princess to armoire
 	$("."+idChildren).html($("#"+idChildren));
 	$("#"+idChildren).attr('class', 'objet');
 }
-// function switchRobe(){ //take the item dressed on the princess to armoire	
-// 	var idChildren = $("#"+id).children().attr('id');
-// 	$("."+idChildren).html($("#"+idChildren));
-// 	$("#"+idChildren).attr('class', 'objet');
-// }
+
+function switchRobe(){ //take the item dressed on the princess to armoire	
+	var idChildren = $("#pr").children().attr('id');
+	$("."+idChildren).html($("#"+idChildren));
+	$("#"+idChildren).attr('class', 'objet');
+}
 
 $("#content1 .objet").bind('click',function(event){
     // if this item is not yet dressed on the princess
@@ -129,21 +130,10 @@ function dropDown(ev)
 		switchRobeDown();
 	}
 }
-// function drop(ev)
-// {   
-// 	console.log(ev);
-// 	if($(item).parents().attr('id') != "pr" &&
-// 		($(ev.srcElement).attr('id') == "pr" || 
-// 			$(ev.srcElement).parents().attr('id') == "pr")){
-// 		//si la princesse a deja une item
-// 		if($("#pr").children() != 0){
-// 			switchRobe();
-// 		}
-// 		$("#pr").html(item);
-// 		$(item).attr("class", "itemPlaced");
-// 	} else if ($(item).parents().attr('id') == "pr" &&
-// 		$(ev.srcElement).attr('class') == $(item).attr('id')) {
-// 		switchRobe();
-// 	}
 
-// }
+$("#parapluie").bind('click',function(event){
+$(".parapluie").html(this);
+
+$("#pluie").remove();
+$("#imgSoleil").css("display", "block");
+});
