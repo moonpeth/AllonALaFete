@@ -44,7 +44,7 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 /*niveau1 page*/
 
 .princesse{
-	background: url("../img/princesse_nue.png");
+	background: url("../img/princesse_nue_final.png");
 	background-size: contain;
 	width: 368px;
 	height: 582px;
@@ -78,7 +78,7 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 }
 #contentFete{
 	position: relative;
-	background: url("../img/fete2.jpg");
+	background: url("../img/fete2.jpg") no-repeat !important;
 	width: 1020px;
 	height: 768px;
 	margin: 0 auto;
@@ -102,10 +102,7 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	text-align: center;
 }
 
-#contentFete{
-	background: url("../img/fete2.jpg") no-repeat !important;
-	text-align: center;
-}
+
 .ballonsFete{
 background: url("../img/ballonfete.png");
 position:absolute;
