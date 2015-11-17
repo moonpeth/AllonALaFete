@@ -51,9 +51,26 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	float: right;
 	margin-top: 10%;
 	margin-right: 5%;
+	border: solid red 1px;
+	position: relative;
+}
+#up_pr {
+	position: absolute;
+    width: 368px;
+	height: 231px;
+	border:solid blue 2px;
 }
 
-#content1,#content2,#content3,#contentAccueil,#contentHistoire,#contentIntro,#contentMenu{
+#down_pr{
+	position: absolute;
+    width: 368px;
+	height: 384px;
+	border:solid green 2px;
+	bottom: 0;
+}
+
+#content1,#content2,#content3,#contentAccueil,#contentHistoire,#contentIntro,#contentMenu,#contentFete{
+	position: relative;
 	background: url("../img/fond.png");
 	width: 1024px;
 	height: 768px;
@@ -79,84 +96,146 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	text-align: center;
 }
 
-#robe1 {
+#contentFete{
+	background: url("../img/fete.jpg") no-repeat !important;
+	text-align: center;
+}
+
+#robe1, .robe1,#robe2, .robe2,#robe3, .robe3,#robe4, .robe4 {
 	position:absolute;
-	width: 294.4px;
-	height: 465.6px;
+	width: 257.6px;
+	height: 407.4px;
 	margin-top: 0%;
 	margin-left: 0%;
-	border: solid green 1px;
+	/*border: solid green 1px;*/
 }
 
  .robe1 {
-	position:absolute;
-    width: 294.4px;
-	height: 465.6px;
-	margin-top: -5%;
-	margin-left: 0%;
-	border: solid green 1px;
-}
-
-#robe2{
-	position: absolute;
-	width: 294.4px;
-	height: 465.6px;
-	margin-top: 0%;
-	margin-left: 0%;
-	border: solid red 1px;
+	margin-top: 20%;
+	z-index: 2;
+	/*border: solid green 1px;*/
 }
 
 .robe2 {
-	position: absolute;
-	width: 294.4px;
-	height: 465.6px;
-	margin-top: 2%;
-	margin-left: 15%;
-	border: solid red 1px;
+	z-index: 1;
+	/*border: solid red 1px;*/
 }
 
-#robe3{
-	position: absolute;
-	width: 294.4px;
-	height: 465.6px;
-	margin-top: 0%;
-	margin-left: 0%;
-	border: solid yellow 1px;
-}
 .robe3 {
-	position: absolute;
-	width: 294.4px;
-	height: 465.6px;
-	margin-top: 7%;
-	margin-left: 30%;
-	border: solid yellow 1px;
-}
-#robe4 {
-	position: absolute;
-	width: 294.4px;
-	height: 465.6px;
-	margin-top: 0%;
-	margin-left: 0%;
-	border: solid black 1px;
-
+	margin-left: 18%;
+/*	border: solid yellow 1px;*/
 }
 
 .robe4{
-	position: absolute;
-	width: 294.4px;
-	height: 465.6px;
-	margin-top: 25%;
-	margin-left: 4%;
-	border: solid black 1px;
-
+    margin-top: 20%;
+	margin-left: 18%;
+	/*border: solid black 1px;
+*/
 }
-.robePlaced {
+
+
+#up_robe1, .up_robe1,#up_robe2, .up_robe2,#up_robe3, .up_robe3{
+	position:absolute;
+	width: 257.6px;
+	height: 161.7px;
+	margin-top: 0%;
+	margin-left: 0%;
+	border: solid black 1px;
+	z-index: 3;
+}
+
+ #down_robe1,.down_robe1,#down_robe2, .down_robe2,#down_robe3, .down_robe3 {
+ 	position:absolute;
+	width: 257.6px;
+	height: 268.8px;
+	margin-top: 0%;
+	margin-left: 0%;
+	border: solid yellow 1px;
+	z-index: 3;
+ }
+.up_robe2{
+	margin-top: 0%;
+	margin-left: 12%;
+}
+
+.up_robe3{
+	margin-top: 0%;
+	margin-left: 21%;
+}
+.down_robe1 {
+margin-top: 20%;
+margin-left: 0%;
+}
+.down_robe2 {
+margin-top: 20%;
+margin-left: 12%;
+}
+.down_robe3 {
+margin-top: 20%;
+margin-left: 21%;
+}
+.itemPlaced {
 	margin-top: 0% !important;
 	margin-left: 0% !important;	
 	width: 368px !important;
 	height: 582px !important;
 }
 
-/*.robe1, .robe2, .robe3, .robe4 {
+.upItemPlaced {
+    margin-top: 0% !important;
+	margin-left: 0% !important;	
+	width: 368px !important;
+	height: 231px !important;
+}
 
-}*/
+.downItemPlaced {
+    margin-top: 0% !important;
+	margin-left: 0% !important;	
+	width: 368px !important;
+	height: 384px !important;
+}
+#pluie{
+	position: absolute;
+    background: url("../img/pluie1.gif") !important;
+	width: 100%;
+	height: 768px;
+    z-index: 2;
+}
+
+#imgSoleil{
+	position: absolute;
+	display: none;
+	width: 200px;
+	height: 200px;
+	right: 10px;
+    z-index: 3;
+}
+
+#parapluie{
+	position: absolute;
+	width: 160.8px;
+	height: 192px;
+	left:10px;
+	bottom:20px;
+    z-index: 3;
+}
+
+.parapluie {
+	position:absolute;
+	width:192.96px;
+	height:230.4px ;
+	right:280px;
+	top:20px;
+	border:solid, red,3px;
+}
+
+.parapluie *{
+	width:192.96px !important;
+	height:230.4px !important;
+}
+
+#bouton_next{
+	position: absolute;
+	bottom: -30px;
+	right: 10px;
+}
