@@ -145,7 +145,7 @@ $("body").replaceWith('<body>'+
        '<div id="niveau1" class="backgroundBlock">'+
           '<div id="contentFete">'+
               '<div class="princesse" id="pr">'+princesse+'</div>'+'<audio id="storyAudio" src="audio/musique_fête.mp3" type="audio/mp3" autoplay="true"></audio>'+           
-          '</div> <audio id="allonFete" src="audio/allons_fete.mp3" type="audio/mp3" autoplay="true"></audio></div></body>');
-}
+          '</div> <audio id="allonFete" src="audio/allons_fete.mp3" type="audio/mp3" autoplay="true"></audio>'+
+          '<img id="bouton_menu" src = "./img/bouton_menu.png" onclick="location.href=\'menu.html\'"/></div></body>');}
 
 );
