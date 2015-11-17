@@ -51,21 +51,21 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	float: right;
 	margin-top: 10%;
 	margin-right: 5%;
-	border: solid red 1px;
+	/*border: solid red 1px;*/
 	position: relative;
 }
 #up_pr {
 	position: absolute;
     width: 368px;
 	height: 231px;
-	border:solid blue 2px;
+	/*border:solid blue 2px;*/
 }
 
 #down_pr{
 	position: absolute;
     width: 368px;
 	height: 384px;
-	border:solid green 2px;
+/*	border:solid green 2px;*/
 	bottom: 0;
 }
 
@@ -82,7 +82,7 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 }
 
 #contentIntro{
-	background: url("../img/fond.png");
+	background: url("../img/bambiAnime.gif");
 	text-align: center;
 }
 
@@ -140,7 +140,7 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	height: 161.7px;
 	margin-top: 0%;
 	margin-left: 0%;
-	border: solid black 1px;
+	/*border: solid black 1px;*/
 	z-index: 3;
 }
 
@@ -150,7 +150,7 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 	height: 268.8px;
 	margin-top: 0%;
 	margin-left: 0%;
-	border: solid yellow 1px;
+	/*border: solid yellow 1px;*/
 	z-index: 3;
  }
 .up_robe2{
@@ -226,7 +226,7 @@ margin-left: 21%;
 	height:230.4px ;
 	right:280px;
 	top:20px;
-	border:solid, red,3px;
+	/*border:solid, red,3px;*/
 }
 
 .parapluie *{
