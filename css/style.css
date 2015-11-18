@@ -245,6 +245,32 @@ margin-left: 21%;
 	height:230.4px !important;
 }
 
+#lunette{
+	position: absolute;
+	width: 180px;
+	height: 90px;
+	left:200px;
+	bottom:100px;
+    z-index: 5;
+}
+
+.lunette {
+	position:relative;
+	width: 72px;
+	height: 36px;	
+	top:178px;
+	left: 720px;
+    z-index: 5;
+}
+
+
+
+.lunette *{
+	width:72px !important;
+	height:36px !important;
+}
+
+
 #bouton_next{
 	position: absolute;
 	bottom: -10px;
