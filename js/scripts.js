@@ -13,7 +13,7 @@ resize();
 
 /*pour les audios*/
 $("#storyAudio").bind('ended', function(){
-    window.location.replace("intro.html");
+    window.location.replace("menu.html");
 });  
 
 $("#paroleAudio").bind('ended', function(){
