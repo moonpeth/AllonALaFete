@@ -132,8 +132,30 @@ function dropDown(ev)
 }
 
 $("#parapluie").bind('click',function(event){
-$(".parapluie").html(this);
+	$(".parapluie").html(this);
 
-$("#pluie").remove();
-$("#imgSoleil").css("display", "block");
+	$("#pluie").remove();
+	$("#imgSoleil").css("display", "block");
+	setTimeout(
+	  function() 
+	  {
+	    $('.parapluie').remove();
+	    $("body").append("<audio id=\"allonFete\" src=\"audio/parapluieDisparu.mp3\" type=\"audio/mp3\" autoplay=\"true\"></audio>");
+	  }, 5000);
 });
+
+$("#lunette").bind('click',function(event){
+	$(".lunette").html(this);
+	$(this).attr("id", "placedLunette");
+});
+
+$("#bouton_next").bind('click',function(event){
+var princesse = $("#pr").html();
+console.log(princesse)	;
+$("body").replaceWith('<body>'+
+       '<div id="niveau1" class="backgroundBlock">'+
+          '<div id="contentFete"><img id="bouton_menu" src = "./img/bouton_menu.png" onclick="location.href=\'menu.html\'"/>'+
+              '<div class="princesse" id="pr">'+princesse+'</div>'+'<audio id="storyAudio" src="audio/musique_fête.mp3" type="audio/mp3" autoplay="true"></audio>'+           
+          '</div> <audio id="allonFete" src="audio/allons_fete.mp3" type="audio/mp3" autoplay="true"></audio></div></body>');}
+
+);
