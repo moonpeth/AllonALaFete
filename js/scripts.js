@@ -1,15 +1,3 @@
-$(window).resize(function(){
-	resize();
-});
-
-function resize(){
-	// $(".backgroundImage").css("height", $(window).height()+"px");
-	// $(".backgroundImage").css("width", $(window).height()*1.35+"px");
-	// $("#button_play").css("margin-top", ($(window).height()-124)/2-170+"px");
-	// $("#bouton_niveau2").css("margin-top", $(window).height()/2-90+"px");
-}
-
-resize();
 
 /*pour les audios*/
 $("#storyAudio").bind('ended', function(){
@@ -20,6 +8,8 @@ $("#paroleAudio").bind('ended', function(){
     window.location.replace("menu.html");
 }); 
 
+var vid = document.getElementById("jeux_bg");
+vid.volume = 0.4;
 
 /*niveau1   click*/
 function switchRobeUp(){ //take the item dressed on the princess to armoire
@@ -135,18 +125,25 @@ $("#parapluie").bind('click',function(event){
 	$(".parapluie").html(this);
 
 	$("#pluie").remove();
-	$("#imgSoleil").css("display", "block");
 	setTimeout(
 	  function() 
 	  {
 	    $('.parapluie').remove();
+	  }, 2000);
+	setTimeout(
+	  function() 
+	  {
+	    $("#imgSoleil").css("display", "block");
 	    $("body").append("<audio id=\"allonFete\" src=\"audio/parapluieDisparu.mp3\" type=\"audio/mp3\" autoplay=\"true\"></audio>");
 	  }, 5000);
 });
 
 $("#lunette").bind('click',function(event){
-	$(".lunette").html(this);
-	$(this).attr("id", "placedLunette");
+	// $(".lunette").html(this);
+	// $(this).attr("id", "placedLunette");
+	$(".princesse").css({
+		"background": "url(../AllonALaFete/img/princesse_nue_final_lunette.png)",
+		"background-size": "contain"});  
 });
 
 $("#bouton_next").bind('click',function(event){

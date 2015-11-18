@@ -210,6 +210,7 @@ margin-left: 21%;
     background: url("../img/pluie1.gif") !important;
 	width: 100%;
 	height: 768px;
+	top:-10px;
     z-index: 2;
 }
 
