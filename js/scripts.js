@@ -151,6 +151,7 @@ $("#lunette").bind('click',function(event){
 	$(".princesse").css({
 		"background": "url(../AllonALaFete/img/princesse_nue_final_lunette.png)",
 		"background-size": "contain"});  
+	$("body").append("<audio id=\"allonFete\" src=\"audio/bravo.mp3\" type=\"audio/mp3\" autoplay=\"true\"></audio>");
 });
 
 // la fete
