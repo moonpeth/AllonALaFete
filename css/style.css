@@ -5,10 +5,6 @@ body{
 	cursor: url(../img/cursor_hand.png) 18 10, default;
 }
 
-/*#title{
-	cursor: pointer;
-}*/
-
 /*general clickable object */
 #bouton_jouer{
 cursor: url(../img/cursor_hand.png) 18 10, default;
@@ -29,7 +25,6 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 }
 
 .bouton_niveau{
-	cursor:pointer;
 	padding: 0 5%;
 }
 
@@ -37,14 +32,10 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
    padding-top: 9%;
 }
 
-#bouton_aide{
-	cursor:pointer;
-}
-
 /*niveau1 page*/
 
 .princesse{
-	background: url("../img/princesse_nue_final (1).png");
+	background: url("../img/princesse_nue.png");
 	background-size: contain;
 	width: 368px;
 	height: 582px;
@@ -78,7 +69,7 @@ cursor: url(../img/cursor_hand.png) 18 10, default;
 }
 #contentFete{
 	position: relative;
-	background: url("../img/fete2.jpg") no-repeat !important;
+	background: url("../img/fete.png") no-repeat !important;
 	width: 1020px;
 	height: 768px;
 	margin: 0 auto;
@@ -228,7 +219,7 @@ margin-left: 21%;
 	width: 160.8px;
 	height: 192px;
 	left:10px;
-	bottom:20px;
+	bottom:100px;
     z-index: 3;
 }
 
@@ -251,7 +242,7 @@ margin-left: 21%;
 	width: 180px;
 	height: 90px;
 	left:200px;
-	bottom:100px;
+	bottom:150px;
     z-index: 5;
 }
 
@@ -274,7 +265,7 @@ margin-left: 21%;
 
 #bouton_next{
 	position: absolute;
-	bottom: -10px;
+	bottom: -25px;
 	right: 10px;
 }
 

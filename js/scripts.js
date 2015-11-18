@@ -12,18 +12,6 @@ var vid = document.getElementById("jeux_bg");
 vid.volume = 0.4;
 
 /*niveau1   click*/
-function switchRobeUp(){ //take the item dressed on the princess to armoire
-	var idChildren = $("#up_pr").children().attr('id');
-	$("."+idChildren).html($("#"+idChildren));
-	$("#"+idChildren).attr('class', 'objet');
-}
-
-function switchRobeDown(){ //take the item dressed on the princess to armoire
-	var idChildren = $("#down_pr").children().attr('id');
-	$("."+idChildren).html($("#"+idChildren));
-	$("#"+idChildren).attr('class', 'objet');
-}
-
 function switchRobe(){ //take the item dressed on the princess to armoire	
 	var idChildren = $("#pr").children().attr('id');
 	$("."+idChildren).html($("#"+idChildren));
@@ -45,8 +33,19 @@ $("#content1 .objet").bind('click',function(event){
 
 });
 
-
 /*niveau2 & 3,  drag&drop*/
+function switchRobeUp(){ //take the item dressed on the princess to armoire
+	var idChildren = $("#up_pr").children().attr('id');
+	$("."+idChildren).html($("#"+idChildren));
+	$("#"+idChildren).attr('class', 'objet');
+}
+
+function switchRobeDown(){ //take the item dressed on the princess to armoire
+	var idChildren = $("#down_pr").children().attr('id');
+	$("."+idChildren).html($("#"+idChildren));
+	$("#"+idChildren).attr('class', 'objet');
+}
+
 function allowDrop(ev)
 {
 	ev.preventDefault();
@@ -54,24 +53,22 @@ function allowDrop(ev)
 
 var item = null;
 
-// function drag(ev)
-// {  //if the item is not yet dressed on the princess
-//    if($(ev.srcElement).parents("#pr").length == 0){
-//         item = ev.srcElement;
-//    }else{ //if the item is already on the princess, then take it off
-// 	   	item = ev.srcElement;
-// 	   	//switchRobe();
-//    }
-// }
-
 function drag(ev)
-{  //if the item is not yet dressed on the princess
+{  
+   var pluie = $("#pluie");
+		if(pluie.length){
+  //Le pluie existe
+ $("body").append("<audio id=\"beep\" src=\"audio/beep.mp3\" type=\"audio/mp3\" autoplay=\"true\"></audio>");
+		} else {
+  //Le pluie n'existe pas
+	  //if the item is not yet dressed on the princess
    if($(ev.srcElement).parents("#up_pr").length == 0 || $(ev.srcElement).parents("#up_pr").length == 0){
         item = ev.srcElement;
    }else{ //if the item is already on the princess, then take it off
 	   	item = ev.srcElement;
 	   	//switchRobe();
    }
+	}
 }
 
 function dropUp(ev){
@@ -121,31 +118,42 @@ function dropDown(ev)
 	}
 }
 
+// des actions pour les éléments dans le niveau3
 $("#parapluie").bind('click',function(event){
-	$(".parapluie").html(this);
+	// $(".parapluie").html(this);
 
 	$("#pluie").remove();
+	$('#parapluie').remove();
+	$(".princesse").css({
+		"background": "url(../AllonALaFete/img/princesse_parapluie.png)",
+		"background-size": "contain"});  
+	 $("body").append("<audio id=\"allonFete\" src=\"audio/bravo.mp3\" type=\"audio/mp3\" autoplay=\"true\"></audio>");
 	setTimeout(
 	  function() 
-	  {
-	    $('.parapluie').remove();
-	  }, 2000);
+	  {  
+	  $(".princesse").css({
+		"background": "url(../AllonALaFete/img/princesse_nue.png)",
+		"background-size": "contain"});  
+	  }, 8000);
+
 	setTimeout(
 	  function() 
 	  {
 	    $("#imgSoleil").css("display", "block");
 	    $("body").append("<audio id=\"allonFete\" src=\"audio/parapluieDisparu.mp3\" type=\"audio/mp3\" autoplay=\"true\"></audio>");
-	  }, 5000);
+	  }, 10000);
 });
 
 $("#lunette").bind('click',function(event){
 	// $(".lunette").html(this);
 	// $(this).attr("id", "placedLunette");
+	$('#lunette').remove();
 	$(".princesse").css({
 		"background": "url(../AllonALaFete/img/princesse_nue_final_lunette.png)",
 		"background-size": "contain"});  
 });
 
+// la fete
 $("#bouton_next").bind('click',function(event){
 var princesse = $("#pr").html();
 console.log(princesse)	;
