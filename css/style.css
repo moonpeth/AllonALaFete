@@ -155,14 +155,15 @@ position:absolute;
 	/*border: solid yellow 1px;*/
 	z-index: 3;
  }
+
 .up_robe2{
 	margin-top: 0%;
-	margin-left: 12%;
+	margin-left: 15%;
 }
 
 .up_robe3{
 	margin-top: 0%;
-	margin-left: 21%;
+	margin-left: 30%;
 }
 .down_robe1 {
 margin-top: 20%;
@@ -170,11 +171,11 @@ margin-left: 0%;
 }
 .down_robe2 {
 margin-top: 20%;
-margin-left: 12%;
+margin-left: 15%;
 }
 .down_robe3 {
 margin-top: 20%;
-margin-left: 21%;
+margin-left: 30%;
 }
 .itemPlaced {
 	margin-top: 0% !important;
